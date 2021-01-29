@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+	--bootappend-live "boot=live components locales=en_AU.UTF-8 keyboard-layouts=us" \
+	--debian-installer live \
+	"${@}"
